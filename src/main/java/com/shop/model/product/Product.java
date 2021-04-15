@@ -1,5 +1,6 @@
-package com.shop.model;
+package com.shop.model.product;
 
+import com.shop.model.group.Group;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -15,4 +16,5 @@ public class Product {
     private String id;
     private String name;
     private BigDecimal price;
+    private Group group;
 }
