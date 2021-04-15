@@ -1,5 +1,6 @@
 package com.shop.model.customer;
 
+import com.shop.model.cart.Cart;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -15,5 +16,6 @@ public class Customer {
     private String lastName;
     private CommunicationCustomer communicationData;
     private AddressCustomer address;
+    private Cart cart;
 
 }

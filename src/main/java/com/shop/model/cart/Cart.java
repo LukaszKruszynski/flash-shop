@@ -1,4 +1,4 @@
-package com.shop.model.group;
+package com.shop.model.cart;
 
 import com.shop.model.product.Product;
 import lombok.AllArgsConstructor;
@@ -10,14 +10,9 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-@Document(value = "groups")
-public class Group {
+@Document(value = "carts")
+public class Cart {
     @Id
     private String id;
-    private String name;
     private List<Product> products;
-
-    public Group(String name) {
-        this.name = name;
-    }
 }
