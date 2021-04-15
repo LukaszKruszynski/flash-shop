@@ -1,17 +1,23 @@
-package com.shop.model.cart;
+package com.shop.order;
 
+import com.shop.model.customer.Customer;
 import com.shop.model.product.Product;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Value;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigDecimal;
 import java.util.List;
-@Data
+
+@Value
 @AllArgsConstructor
-@Document(value = "carts")
-public class Cart {
+@Document(value = "orders")
+public class Order {
     @Id
     private String id;
+    private Customer customer;
     private List<Product> products;
+    private BigDecimal totalAmount;
+    private boolean isPaid;
 }
