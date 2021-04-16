@@ -1,6 +1,6 @@
 package com.shop.dto.group;
 
-import com.shop.model.product.Product;
+import com.shop.dto.product.ProductDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +13,7 @@ import java.util.List;
 public class GroupDto {
     private String id;
     private String name;
-    private List<Product> products;
+    private List<ProductDto> productsDto;
 
     public GroupDto(String name) {
         this.name = name;
