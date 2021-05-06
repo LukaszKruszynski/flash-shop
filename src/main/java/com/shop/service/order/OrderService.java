@@ -5,6 +5,9 @@ import com.shop.repository.order.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class OrderService {
@@ -14,7 +17,12 @@ public class OrderService {
         return repository.save(order);
     }
 
-    public void deleteOrder(Order order) {
-        repository.delete(order);
+    public List<Order> getOrders() {
+        return repository.findAll();
+    }
+    public List<Order> getOrdersByCustomerId(String customerId) {
+        return this.getOrders().stream()
+                .filter(order -> order.getCustomer().getId().equals(customerId))
+                .collect(Collectors.toList());
     }
 }

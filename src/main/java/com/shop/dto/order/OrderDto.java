@@ -1,7 +1,7 @@
 package com.shop.dto.order;
 
-import com.shop.model.customer.Customer;
-import com.shop.model.product.Product;
+import com.shop.dto.customer.CustomerDto;
+import com.shop.dto.product.ProductDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,8 +14,9 @@ import java.util.List;
 @Builder
 public class OrderDto {
     private String id;
-    private Customer customer;
-    private List<Product> products;
+    private CustomerDto customer;
+    private List<ProductDto> products;
     private BigDecimal totalAmount;
-    private boolean isPaid;
+    private OrderDetailsDto orderDetails;
+
 }
