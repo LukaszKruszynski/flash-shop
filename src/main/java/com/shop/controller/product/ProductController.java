@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("products")
@@ -23,9 +22,7 @@ public class ProductController {
 
     @GetMapping("/search/{name}")
     public List<ProductDto> findProducts(@PathVariable String name) {
-        return this.getProducts().stream()
-                .filter(p -> p.getName().equals(name))
-                .collect(Collectors.toList());
+        return mapper.mapToProductDtos(service.findProductsByName(name));
     }
 
     @PostMapping("/create")
