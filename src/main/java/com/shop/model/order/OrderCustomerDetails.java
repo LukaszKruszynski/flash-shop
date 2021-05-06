@@ -15,6 +15,4 @@ public class OrderCustomerDetails {
     private String lastName;
     private String mail;
     private String phone;
-    private OrderDeliveryAddress orderDeliveryAddress;
-    
 }

@@ -22,7 +22,7 @@ public class OrderService {
     }
     public List<Order> getOrdersByCustomerId(String customerId) {
         return this.getOrders().stream()
-                .filter(order -> order.getCustomer().getId().equals(customerId))
+                .filter(order -> order.getOrderDetails().getOrderCustomerDetails().getCustomerId().equals(customerId))
                 .collect(Collectors.toList());
     }
 }

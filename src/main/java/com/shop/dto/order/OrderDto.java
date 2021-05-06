@@ -13,7 +13,6 @@ import java.util.List;
 @Builder
 public class OrderDto {
     private String id;
-    private OrderCustomerDetailsDto orderCustomerDetailsDto;
     private List<ProductDto> products;
     private BigDecimal totalAmount;
     private OrderDetailsDto orderDetails;

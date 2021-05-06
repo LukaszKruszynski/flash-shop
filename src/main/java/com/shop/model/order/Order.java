@@ -17,7 +17,6 @@ import java.util.List;
 public class Order {
     @Id
     private String id;
-    private OrderCustomerDetails customerDetails;
     private List<Product> products;
     private BigDecimal totalAmount;
     private OrderDetails orderDetails;

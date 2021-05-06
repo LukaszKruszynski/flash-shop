@@ -13,4 +13,5 @@ public class OrderDetails {
     private boolean isPaid;
     private boolean isSend;
     private ShippingDetails shippingDetails;
+    private OrderCustomerDetails orderCustomerDetails;
 }
