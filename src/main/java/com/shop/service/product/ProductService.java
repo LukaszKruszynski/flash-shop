@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 @Service
@@ -24,7 +25,7 @@ public class ProductService {
     }
     public List<Product> findProductsByName(String name) {
         return getProducts().stream()
-                .filter(p -> p.getName().contains(name))
+                .filter(p -> p.getName().toLowerCase().contains(name.toLowerCase()))
                 .collect(Collectors.toList());
     }
 }

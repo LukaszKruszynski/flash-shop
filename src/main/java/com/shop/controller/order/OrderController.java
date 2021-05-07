@@ -19,7 +19,7 @@ public class OrderController {
     public List<OrderDto> getOrders() {
         return mapper.mapToOrderDtos(service.getOrders());
     }
-    @GetMapping("/customer/{customerId}")
+    @GetMapping("/customers/{customerId}")
     public List<OrderDto> getOrdersByCustomer(@PathVariable String customerId) {
         return mapper.mapToOrderDtos(service.getOrdersByCustomerId(customerId));
     }
