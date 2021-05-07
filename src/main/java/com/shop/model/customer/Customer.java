@@ -2,12 +2,14 @@ package com.shop.model.customer;
 
 import com.shop.model.cart.Cart;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @AllArgsConstructor
+@Builder
 @Document(collection = "customers")
 public class Customer {
     @Id

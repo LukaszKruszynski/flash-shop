@@ -1,6 +1,6 @@
 package com.shop.dto.customer;
 
-import com.shop.model.cart.Cart;
+import com.shop.dto.cart.CartDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,5 +14,5 @@ public class CustomerDto {
     private String lastName;
     private CommunicationCustomerDto communicationData;
     private AddressCustomerDto address;
-    private Cart cart;
+    private CartDto cart;
 }
